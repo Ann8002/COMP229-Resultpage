@@ -1,0 +1,52 @@
+<%- include('../partials/header.ejs'); %>
+
+<!-- Content for the Add page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h2><%= title %></h2>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="nameTextField">Survey Title</label>
+                    <input type="text" class="form-control"id="nameTextField"placeholder="Enter Survey Title" name="title" required>
+                </div>
+                 <div class="form-group">
+                    <label>Start Date :</label>
+                     <input type="Date"  class="form-control"id="startDate" name="startDate" required >
+                    <label for="endDate">End Date :</label>
+                     <input type="Date" class="form-control"id="endDate" name="endDate" required >
+                </div>
+                 <div class="invisible">
+                    <label>Display Name :</label>
+                     <input type="text"  class="form-control"id="displayName" name="displayName" required value="<%= displayName %>" readonly>>
+                </div>
+                <div class="form-group">
+                    <label>Question 1</label>
+                    <input type="text" class="form-control"id="question1" name="question1"  required>
+                </div>
+              <div class="form-group">
+                    <label>Question 2</label>
+                    <input type="text" class="form-control"id="question2"name="question2" required>
+                </div>
+                <div class="form-group">
+                    <label>Question 3</label>
+                    <input type="text" class="form-control"id="question3"name="question3" required>
+                </div>
+                <div class="form-group">
+                    <label>Question 4</label>
+                    <input type="text" class="form-control" id="question4" name="question4" required>
+                </div>
+                <button class="btn btn-primary" type="submit">
+                    <i class="fa fa-edit"></i> Submit</button>
+                
+                    <a href="/survey" class="btn btn-warning">
+                        <i class="fa fa-undo"></i> Cancel</a>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+ 

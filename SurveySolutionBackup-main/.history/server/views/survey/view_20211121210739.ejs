@@ -1,0 +1,60 @@
+<%- include('../partials/header.ejs'); %>
+<!-- Content for the View page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="nameTextField">Survey Title</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField" name="title" value="<%= survey.title %>">
+                </div>
+                
+                    <div class="form-group">
+                    <label>Question 1</label>
+                    <input type="text" class="form-control"id="question1" name="question1" readonly="readonly"  value="<%= survey.question1 %>">
+                    <input type="checkbox" id="answer" name="true" value="true">
+                    <label for="true"> True</label>
+                    <input type="checkbox" id="answer" name="false" value="false">
+                    <label for="false"> False</label>
+                </div>
+              <div class="form-group">
+                    <label>Question 2</label>
+                    <input type="text" class="form-control"id="question2"name="question2" readonly="readonly"  value="<%= survey.question2 %>">
+                    <input type="checkbox" id="answer" name="true" value="true">
+                    <label for="true"> True</label>
+                    <input type="checkbox" id="answer" name="false" value="false">
+                    <label for="false"> False</label>
+                </div>
+                <div class="form-group">
+                    <label>Question 3</label>
+                    <input type="text" class="form-control"id="question3"name="question3" readonly="readonly"  value="<%= survey.question3 %>">
+                    <input type="checkbox" id="answer" name="true" value="true">
+                    <label for="true"> True</label>
+                    <input type="checkbox" id="answer" name="false" value="false">
+                    <label for="false"> False</label>
+                </div>
+                <div class="form-group">
+                    <label>Question 4</label>
+                    <input type="text" class="form-control" id="question4" name="question4"  readonly="readonly" value="<%= survey.question4 %>">
+                    <input type="checkbox" id="answer" name="true" value="true">
+                    <label for="true"> True</label>
+                    <input type="checkbox" id="answer" name="fale" value="false">
+                    <label for="false"> False</label>
+                </div>
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/survey" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+

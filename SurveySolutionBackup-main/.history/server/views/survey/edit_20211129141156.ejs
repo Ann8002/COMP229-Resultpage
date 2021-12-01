@@ -1,0 +1,52 @@
+<%- include('../partials/header.ejs'); %>
+<!-- Content for the Add page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="nameTextField">Survey Title</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField" name="title" value="<%= survey.title %>">
+                </div>
+                <div class="form-group">
+                    <label>Start Date :</label>
+                     <input type="Date"  class="form-control"id="startDate" name="startDate" value="<%= survey.startDate %>" >
+                    <label for="endDate">End Date :</label>
+                     <input type="Date" class="form-control"id="endDate" name="endDate" value="<%= survey.endDate %>" >
+                </div>
+                    <div class="form-group">
+                    <label>Question 1</label>
+                    <input type="text" class="form-control"id="question1" name="question1" value="<%= survey.question1 %>">
+                    
+                  
+                </div>
+              <div class="form-group">
+                    <label>Question 2</label>
+                    <input type="text" class="form-control"id="question2"name="question2" value="<%= survey.question2 %>">
+               
+                </div>
+                <div class="form-group">
+                    <label>Question 3</label>
+                    <input type="text" class="form-control"id="question3"name="question3" value="<%= survey.question3 %>">
+                
+                <div class="form-group">
+                    <label>Question 4</label>
+                    <input type="text" class="form-control" id="question4" name="question4" value="<%= survey.question4 %>">
+               
+                </div>
+                <button class="btn btn-primary" type="submit">
+                    <i class="fa fa-edit"></i> Submit</button>
+                
+                    <a href="/survey" class="btn btn-warning">
+                        <i class="fa fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
